@@ -5,3 +5,14 @@
   color: @black;
   text-transform: uppercase;
 }
+
+.site-list {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    flex-direction: row;
+  }
+}
