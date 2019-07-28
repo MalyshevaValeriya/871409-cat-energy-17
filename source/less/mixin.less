@@ -2,3 +2,21 @@
   width: @width;
   height: @height;
 }
+
+.wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media @tablet-width {
+    margin: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media @desktop-width {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
