@@ -29,6 +29,7 @@
 .main-nav--opened .main-nav__toggle {
   top: -35px;
   right: -26px;
+
   &::before,
   &::after {
     content: "";
@@ -72,13 +73,12 @@
   display: block;
 }
 
-@media  @tablet-width {
+@media @tablet-width {
   .main-nav {
     width: auto;
     margin: 0;
     display: flex;
     justify-content: space-between;
-    margin: 0;
   }
 
   .main-nav__toggle {
@@ -89,4 +89,3 @@
     display: flex;
   }
 }
-
