@@ -6,12 +6,21 @@
 .main-content__wrapper {
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: 100% 305px;
   text-align: center;
 }
 
 @media @mobile-width-only {
+ .main-content__wrapper {
+    display: flex;
+    flex-direction: column;
+    .wrapper();
+  }
+
   .main-content__title {
-    padding-top: 29px;
+    margin: 0;
+    padding-top: 26px;
+    padding-bottom: 13px;
     font-size: 36px;
     font-weight: normal;
     line-height: 36px;
@@ -19,16 +28,28 @@
   }
 
   .main-content__slogan {
+    padding-bottom: 12px;
     font-size: 14px;
     line-height: 14px;
     color: @white;
     text-transform: uppercase;
   }
+
+  .main-content__image {
+    padding-bottom: 4px;
+  }
+
+  .main-content__button {
+    margin-bottom: 2px;
+    padding: 10px 24px;
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 @media @tablet-width {
   .main-content {
-    margin-bottom: 65px;
+    margin-bottom: -32px;
   }
 
   .main-content__wrapper {
@@ -39,8 +60,9 @@
   }
 
   .main-content__title {
-    margin-left: 90px;
+    margin-left: 88px;
     margin-right: 200px;
+    padding-top: 15px;
     text-align: left;
     font-size: 60px;
     line-height: 60px;
@@ -49,7 +71,7 @@
   }
 
   .main-content__slogan {
-    margin-left: 90px;
+    margin-left: 89px;
     margin-right: 200px;
     text-align: left;
     font-size: 20px;
@@ -61,23 +83,27 @@
   .main-content__image {
     .size(709px, 609px);
     position: relative;
-    top: 90px;
+    top: 0;
+    left: 0;
   }
 
   .main-content__button {
     position: absolute;
     left: 120px;
-    top: 220px;
+    top: 244px;
+    padding: 16px 28px 15px 25px;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
 @media @desktop-width {
   .main-content {
-    margin-top: 113px;
+    margin-top: 92px;
   }
 
   .main-content__title {
-    margin-left: 84px;
+    margin-left: 82px;
     max-width: 540px;
     text-align: left;
     font-size: 60px;
@@ -87,10 +113,10 @@
   }
 
   .main-content__slogan {
-    margin-left: 84px;
+    margin-left: 82px;
     text-align: left;
-    font-size: 22px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 20px;
     text-transform: uppercase;
     color: @black;
   }
@@ -101,8 +127,8 @@
     &::before {
       position: absolute;
       content: "";
-      top: -240px;
-      left: 48%;
+      top: -208px;
+      left: 50%;
       .size(700px, 696px);
       background-image: url("../img/index-background-desktop@1x.jpg");
       background-repeat: no-repeat;
@@ -114,11 +140,13 @@
   .main-content__image {
     .size(552px, 499px);
     position: absolute;
-    top: -90px;
-    right: 255px;
+    top: -65px;
+    left: 491px;
   }
 
   .main-content__button {
     margin-left: 70px;
+    top: 249px;
+    left: 52px;
   }
 }

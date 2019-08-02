@@ -19,8 +19,8 @@
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 10px;
-  right: 6px;
+  top: 12px;
+  right: 9px;
   .size(24px, 2px);
   background-color: @black;
   box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
@@ -74,11 +74,9 @@
 }
 
 @media @tablet-width {
-  .main-nav {
-    width: auto;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
+  .main-nav__wrapper {
+    margin: 0 auto;
+    padding: 0;
   }
 
   .main-nav__toggle {
@@ -86,6 +84,7 @@
   }
 
   .main-nav__list {
-    display: flex;
+    margin: 0;
+    padding: 0;
   }
 }

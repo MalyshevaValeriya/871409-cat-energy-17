@@ -1,7 +1,7 @@
 .copyright {
   display: flex;
   justify-content: space-between;
-  padding: 22px 0;
+  padding: 20px 0;
   align-items: center;
 }
 
@@ -14,4 +14,30 @@
 
 .copyright__logo {
   fill: @gray;
+}
+
+@media @tablet-width {
+  .copyright {
+    margin-right: -85px;
+    padding-top: 15px;
+  }
+
+  .copyright__logo {
+    margin-left: 6px;
+    .size(60px, 42px);
+    opacity: 0.8;
+  }
+}
+
+@media @desktop-width {
+  .copyright {
+    margin-right: -5px;
+    padding-top: 15px;
+  }
+
+  .copyright__logo {
+    margin-left: 15px;
+    .size(40px, 47px);
+    opacity: 0.8;
+  }
 }

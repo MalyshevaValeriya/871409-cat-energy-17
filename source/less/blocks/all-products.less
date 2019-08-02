@@ -3,12 +3,25 @@
 }
 
 .all-products__title {
+  position: relative;
+  margin: 0;
   margin-left: 40px;
-  padding: 0;
+  margin-bottom: 5px;
+  padding-top: 80px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 27px;
+    left: 85px;
+    .size(31px, 31px);
+    background-image: url("../img/icon-plus.svg");
+    opacity: 0.5;
+  }
 }
 
 .all-products__taste {
@@ -18,6 +31,20 @@
   font-size: 12px;
   line-height: 16px;
   color: @gray;
+}
+
+.all-products__btn {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  padding: 10px 95px 10px 95px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  background-color: @gray-light;
+  color: @black;
 }
 
 @media @tablet-width {
@@ -31,7 +58,7 @@
     position: relative;
     max-width: 140px;
     margin: 0 auto;
-    padding: 166px 50px 28px 50px;
+    padding: 162px 30px 27px 35px;
     font-size: 20px;
     line-height: 20px;
     font-weight: 400;
@@ -41,8 +68,8 @@
     &::before {
       position: absolute;
       content: "";
-      top: 50px;
-      left: 95px;
+      top: 52px;
+      left: 74px;
       .size(61px, 61px);
       background-image: url("../img/icon-plus.svg");
       opacity: 0.2;
@@ -50,8 +77,9 @@
   }
 
   .all-products__taste {
-    margin: 0 auto;
-    padding-bottom: 120px;
+    margin: 0;
+    padding-bottom: 90px;
+    padding-left: 75px;
     max-width: 170px;
     font-family: @arial-font;
     font-size: 16px;
@@ -62,7 +90,7 @@
 
   .all-products__btn {
     display: inline-block;
-    padding: 10px 70px 10px 70px;
+    padding: 10px 74px 10px 78px;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
@@ -78,9 +106,9 @@
 @media @desktop-width {
   .all-products__title {
     position: relative;
-    max-width: 140px;
+    max-width: 135px;
     margin: 0 auto;
-    padding: 166px 40px 28px 40px;
+    padding: 165px 5px 28px 10px;
     font-size: 20px;
     line-height: 20px;
     font-weight: 400;
@@ -90,8 +118,8 @@
     &::before {
       position: absolute;
       content: "";
-      top: 50px;
-      left: 95px;
+      top: 55px;
+      left: 46px;
       .size(61px, 61px);
       background-image: url("../img/icon-plus.svg");
       opacity: 0.2;
@@ -99,9 +127,10 @@
   }
 
   .all-products__taste {
-    margin: 0 auto;
-    padding-bottom: 95px;
-    max-width: 165px;
+    margin: 0;
+    padding-bottom: 88px;
+    padding-left: 38px;
+    max-width: 170px;
     font-family: @arial-font;
     font-size: 16px;
     line-height: 16px;
@@ -111,7 +140,7 @@
 
   .all-products__btn {
     display: inline-block;
-    padding: 10px 40px 10px 40px;
+    padding: 10px 38px 10px 39px;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;

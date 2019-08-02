@@ -2,9 +2,13 @@
   .wrapper();
 }
 
+.programs-description__title {
+  margin-top: 14px;
+}
+
 .programs-description__item {
-  margin-bottom: 20px;
-  padding: 2px 40px 5px 40px;
+  margin-bottom: -7px;
+  padding: 0 2px 5px 40px;
   position: relative;
   font-family: "Arial", sans-serif;
   font-size: 14px;
@@ -24,7 +28,7 @@
     &::after {
       position: absolute;
       top: 5px;
-      left: -34px;
+      left: -35px;
       content: "";
       .size(50px, 50px);
       background-image: url("../img/advantage-leaf@1x.png");
@@ -34,7 +38,7 @@
   &--powder {
     &::after {
       position: absolute;
-      top: 5px;
+      top: 3px;
       left: -34px;
       content: "";
       .size(50px, 50px);
@@ -46,7 +50,7 @@
     &::after {
       position: absolute;
       top: 5px;
-      left: -34px;
+      left: -36px;
       content: "";
       .size(50px, 50px);
       background-image: url("../img/advantage-dining@1x.png");
@@ -57,7 +61,7 @@
     &::after {
       position: absolute;
       top: 5px;
-      left: -34px;
+      left: -35px;
       content: "";
       .size(50px, 50px);
       background-image: url("../img/advantage-clock@1x.png");
@@ -66,6 +70,11 @@
 }
 
 @media @tablet-width {
+  .programs-description__title {
+    margin-bottom: 70px;
+    padding-top: 35px;
+  }
+
   .programs-description__list {
     padding: 0;
     display: flex;
@@ -76,7 +85,7 @@
 
   .programs-description__item {
     width: 260px;
-    padding: 102px 70px 45px 0;
+    padding: 98px 65px 122px 0;
     font-size: 16px;
     line-height: 24px;
     color: @gray;
@@ -97,8 +106,8 @@
         font-family: @font;
         font-size: 281px;
         line-height: 281px;
-        top: -35px;
-        left: 120px;
+        top: -40px;
+        left: 119px;
         color: @gray-light;
         z-index: -1;
       }
@@ -120,8 +129,8 @@
         font-family: @font;
         font-size: 281px;
         line-height: 281px;
-        top: -35px;
-        left: 120px;
+        top: -37px;
+        left: 113px;
         color: @gray-light;
         z-index: -1;
       }
@@ -143,8 +152,8 @@
         font-family: @font;
         font-size: 281px;
         line-height: 281px;
-        top: -35px;
-        left: 120px;
+        top: -34px;
+        left: 112px;
         color: @gray-light;
         z-index: -1;
       }
@@ -166,8 +175,8 @@
         font-family: @font;
         font-size: 281px;
         line-height: 281px;
-        top: -35px;
-        left: 120px;
+        top: -36px;
+        left: 113px;
         color: @gray-light;
         z-index: -1;
       }
@@ -185,8 +194,13 @@
 }
 
 @media @desktop-width {
+  .programs-description__title {
+    padding-top: 61px;
+    margin-bottom: 72px;
+  }
+
   .programs-description__item {
     width: 245px;
-    padding: 112px 50px 45px 0;
+    padding: 96px 0 45px 0;
   }
 }
