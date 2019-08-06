@@ -1,1 +1,33 @@
-/* stylelint-disable */
+.logo {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.logo__logo-image {
+  .size(191px, 39px);
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@media @tablet-width {
+  .logo {
+    margin-right: 96px;
+  }
+
+  .logo__logo-image {
+    .size(174px, 59px);
+  }
+}
+
+@media @desktop-width {
+  .logo__logo-image {
+    .size(203px, 60px);
+  }
+}
