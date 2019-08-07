@@ -1,3 +1,12 @@
+.programs-list__wrapper {
+  .wrapper();
+}
+
+.programs-list__item {
+  position: relative;
+  background-color: @gray-light;
+}
+
 .programs-list__title {
   margin-bottom: 36px;
   padding-top: 32px;
@@ -14,17 +23,10 @@
   padding-left: 32px;
   padding-right: 21px;
   padding-bottom: 23px;
-  font-family: "Arial", sans-serif;
+  font-family: @arial-font;
   font-size: 14px;
   line-height: 18px;
   color: @gray;
-}
-
-.programs-list {
-  position: relative;
-  width: 280px;
-  margin: 20px;
-  background-color: @gray-light;
 }
 
 .programs-list__logo {
@@ -42,7 +44,7 @@
       top: -2px;
       left: 7px;
       .size(35px, 49px);
-      background-image: url("../../img/icon-cat-slim.svg");
+      background-image: url("../img/icon-cat-slim.svg");
       background-position: center;
       background-repeat: no-repeat;
     }
@@ -55,7 +57,7 @@
       top: 10px;
       left: -10px;
       .size(67px, 28px);
-      background-image: url("../../img/icon-cat-pro.svg");
+      background-image: url("../img/icon-cat-pro.svg");
       background-position: center;
       background-repeat: no-repeat;
     }
@@ -77,5 +79,149 @@
     left: 117px;
     .size(25px, 12px);
     background-image: url("../img/icon-right-arrow-long.svg");
+  }
+}
+
+@media @tablet-width {
+  .programs-list__title {
+    margin-bottom: 36px;
+    padding-top: 80px;
+    padding-left: 55px;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 37px;
+    color: @black;
+    text-transform: uppercase;
+  }
+
+  .programs-list__description {
+    margin: 0;
+    padding-left: 52px;
+    padding-right: 280px;
+    padding-bottom: 60px;
+    font-family: @arial-font;
+    font-size: 16px;
+    line-height: 24px;
+    color: @gray;
+  }
+
+  .programs-list__logo {
+    position: absolute;
+    top: 100px;
+    left: 450px;
+    .size(200px, 200px);
+    background-color: @green;
+    border-radius: 50%;
+
+    &--slim {
+      &::after {
+        position: absolute;
+        content: "";
+        top: -10px;
+        left: 30px;
+        .size(141px; 194px);
+        background-image: url("../img/icon-cat-slim.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--pro {
+      &::after {
+        position: absolute;
+        content: "";
+        top: 40px;
+        left: -36px;
+        .size(268px, 113px);
+        background-image: url("../img/icon-cat-pro.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .programs-list__link {
+    position: relative;
+    display: inline-block;
+    padding-left: 53px;
+    padding-bottom: 60px;
+    font-size: 20px;
+    line-height: 20px;
+    color: @black;
+    text-transform: uppercase;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 5px;
+      left: 190px;
+      .size(25px, 12px);
+      background-image: url("../img/icon-right-arrow-long.svg");
+    }
+  }
+}
+
+@media @desktop-width {
+  .programs-list__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .programs-list__item {
+    margin-right: 80px;
+    width: 570px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .programs-list__title {
+    margin-bottom: 75px;
+    padding-left: 215px;
+    padding-top: 40px;
+  }
+
+  .programs-list__description {
+    margin: 0;
+    padding-right: 56px;
+    padding-bottom: 36px;
+  }
+
+  .programs-list__logo {
+    position: absolute;
+    top: 40px;
+    left: 45px;
+    .size(100px, 100px);
+    background-color: @green;
+    border-radius: 50%;
+
+    &--slim {
+      &::after {
+        position: absolute;
+        content: "";
+        top: -5px;
+        left: 15px;
+        .size(71px; 97px);
+        background-image: url("../img/icon-cat-slim.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--pro {
+      &::after {
+        position: absolute;
+        content: "";
+        top: 20px;
+        left: -15px;
+        .size(134px, 57px);
+        background-image: url("../img/icon-cat-pro.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
   }
 }

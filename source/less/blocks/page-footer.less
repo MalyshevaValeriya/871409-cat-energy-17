@@ -1,3 +1,43 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.page-footer__wrapper {
+  .wrapper();
+  padding-top: 35px;
+  background-color: @gray-light;
+}
+
 .page-footer__logo {
-  margin-left: 96px;
+  margin-left: 76px;
+  margin-bottom: 30px;
+}
+
+@media @tablet-width {
+  .page-footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    padding-top: 35px;
+    background-color: @gray-light;
+  }
+
+  .page-footer__logo {
+    margin: 0;
+  }
+}
+
+@media @desktop-width {
+  .page-footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    padding-top: 35px;
+    background-color: @gray-light;
+  }
+
+  .page-footer__logo {
+    margin: 0;
+  }
 }
