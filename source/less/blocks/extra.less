@@ -1,0 +1,247 @@
+.extra {
+  .wrapper();
+  padding-top: 30px;
+}
+
+.extra__title {
+  margin: 0;
+  position: relative;
+
+  margin-bottom: 33px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: normal;
+
+  /*
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: @green;
+      .size(53px, 3px);
+      right: -20px;
+      top: 16px;
+    }
+  */
+}
+
+.extra__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.extra__item {
+  padding: 14px 1px 17px 1px;
+  border-top: 1px solid @gray-border;
+
+  &:last-child {
+    border-bottom: 1px solid @gray-border;
+  }
+}
+
+.extra__name {
+  margin-bottom: 13px;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.extra__specification {
+  margin-bottom: 14px;
+  font-family: @arial-font;
+  font-size: 14px;
+  line-height: 14px;
+  color: @gray;
+  border-collapse: collapse;
+}
+
+@media @mobile-width-only {
+  .extra__item-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .extra__size {
+    padding: 0;
+    text-align: left;
+  }
+
+  .extra__cost {
+    padding: 0;
+    text-align: right;
+  }
+
+  .extra__btn {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 111px 10px 109px;
+  }
+}
+
+@media @tablet-width {
+  .extra__wrapper {
+    .wrapper();
+  }
+
+  .extra__title {
+    margin-top: -77px;
+    margin-bottom: 70px;
+    padding-left: 67px;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: normal;
+    /*
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: @green;
+        .size(28px, 3px);
+        left: -30px;
+        top: 50%;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        background-color: @green;
+        .size(327px, 3px);
+        right: -3px;
+        top: 50%;
+    }
+*/
+  }
+
+  .extra__item {
+    padding: 25px 38px 28px 38px;
+    border: 1px solid @gray-border;
+
+    &:nth-child(2n) {
+      border-top: none;
+    }
+  }
+
+  .extra__item-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .extra__name {
+    padding-bottom: 25px;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .extra__specification {
+    font-family: @arial-font;
+    font-size: 16px;
+    line-height: 20px;
+    color: @gray;
+    border-collapse: collapse;
+  }
+
+  .extra__size {
+    padding-right: 50px;
+  }
+
+  .extra__btn {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 285px;
+  }
+}
+
+@media @desktop-width {
+  .extra {
+    .wrapper();
+  }
+
+  .extra__wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+
+  .extra__title {
+    margin-top: -64px;
+    margin-bottom: 80px;
+    padding: 0;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: normal;
+
+    /*&::before {
+      position: absolute;
+      content: "";
+      background-color: @green;
+      .size(100%, 3px);
+      left: -1260px;
+      top: 50%;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: @green;
+      .size(100%, 3px);
+      right: -373px;
+      top: 57%;
+    }
+    */
+  }
+
+  .extra__list {
+    width: 895px;
+    margin-right: 80px;
+  }
+
+  .extra__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border: none;
+    border-top: 1px solid @gray-border;
+
+    &:nth-child(2n) {
+      border-top: 1px solid @gray-border;
+    }
+  }
+
+  .extra__name {
+    width: 245px;
+    margin: 0;
+    margin-right: 80px;
+    padding: 0;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .extra__specification {
+    width: 295px;
+    margin: 0;
+    font-family: @arial-font;
+    font-size: 16px;
+    line-height: 20px;
+    color: @gray;
+    border-collapse: collapse;
+  }
+
+  .extra__cost {
+    width: 50px;
+    text-align: left;
+  }
+
+  .extra__btn {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 8px 92px 11px 92px;
+  }
+}

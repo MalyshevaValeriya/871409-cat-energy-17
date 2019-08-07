@@ -4,13 +4,19 @@
 
 .programs-list__item {
   position: relative;
+  margin-top: 19px;
+  padding: 31px 20px 22px;
   background-color: @gray-light;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .programs-list__title {
-  margin-bottom: 29px;
-  padding-top: 30px;
-  padding-left: 90px;
+  margin: 0;
+  margin-bottom: 30px;
+  padding-left: 70px;
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
@@ -20,67 +26,65 @@
 
 .programs-list__description {
   margin: 0;
-  padding-left: 20px;
-  padding-right: 21px;
-  padding-bottom: 43px;
+  padding-bottom: 41px;
   font-family: @arial-font;
   font-size: 14px;
   line-height: 18px;
   color: @gray;
 }
 
-.programs-list__logo {
-  position: absolute;
-  top: 24px;
-  left: 22px;
-  .size(50px, 51px);
-  background-color: @green;
-  border-radius: 50%;
-
-  &--slim {
-    &::after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 8px;
-      .size(35px, 49px);
-      background-image: url("../img/icon-cat-slim.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  }
-
-  &--pro {
-    &::after {
-      position: absolute;
-      content: "";
-      top: 10px;
-      left: -10px;
-      .size(67px, 28px);
-      background-image: url("../img/icon-cat-pro.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  }
-}
-
-.programs-list__link {
-  display: block;
-  position: relative;
-  padding-left: 20px;
-  padding-bottom: 23px;
-  font-size: 16px;
-  line-height: 16px;
-  color: @black;
-  text-transform: uppercase;
-
-  &::after {
+@media @mobile-width-only {
+  .programs-list__logo {
     position: absolute;
-    content: "";
-    top: 2px;
-    left: 117px;
-    .size(25px, 12px);
-    background-image: url("../img/icon-right-arrow-long.svg");
+    top: 25px;
+    left: 22px;
+    .size(50px, 51px);
+    background-color: @green;
+    border-radius: 50%;
+
+    &--slim {
+      &::after {
+        position: absolute;
+        content: "";
+        top: -2px;
+        left: 8px;
+        .size(35px, 49px);
+        background-image: url("../img/icon-cat-slim.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--pro {
+      &::after {
+        position: absolute;
+        content: "";
+        top: 12px;
+        left: -10px;
+        .size(67px, 28px);
+        background-image: url("../img/icon-cat-pro.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .programs-list__link {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    line-height: 16px;
+    color: @black;
+    text-transform: uppercase;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 2px;
+      left: 95px;
+      .size(25px, 12px);
+      background-image: url("../img/icon-right-arrow-long.svg");
+    }
   }
 }
 
@@ -115,7 +119,7 @@
   .programs-list__logo {
     position: absolute;
     top: 90px;
-    left: 447px;
+    right: 10px;
     .size(200px, 200px);
     background-color: @green;
     border-radius: 50%;

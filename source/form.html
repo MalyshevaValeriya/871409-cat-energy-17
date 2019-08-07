@@ -39,6 +39,84 @@
       </div>
     </header>
 
+    <main class="main-form">
+      <div class="main-form__wrapper">
+        <h1 class="main-form__title title">Подбор программы</h1>
+        <p class="main-form__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <form class="form" method="GET" action="https://echo.htmlacademy.ru">
+          <div class="form__wrapper ">
+            <section class="form__profile">
+              <p class="form__profile-list">
+                <label class="form__label form__label--name" for="name">Имя:*</label>
+                <input class="form__input form__input--name" type="text" id="name" name="name" placeholder="Барсик">
+              </p>
+              <p class="form__profile-list">
+                <label class="form__label form__label--weight" for="weight">Вес (кг):*</label>
+                <input class="form__input form__input--weight" type="text" id="weight" name="weight" placeholder="7">
+              </p>
+              <p class="form__profile-list">
+                <label class="form__label form__label--age" for="age">Возраст (лет):</label>
+                <input class="form__input form__input--age" type="text" id="age" name="age" placeholder="7">
+              </p>
+            </section>
+            <section class="form__target">
+              <div class="form__target-wrapper">
+                <p class="form__target-list">
+                  <input class="form__radio visually-hidden" type="radio" name="program" id="weight-loss" value="Похудение" checked>
+                  <label class="form__label form__label--radio" for="weight-loss">Похудение</label>
+                </p>
+                <p class="form__target-list">
+                  <input class="form__radio visually-hidden" type="radio" name="program" id="mass-gain" value="Набор массы">
+                  <label class="form__label form__label--radio" for="mass-gain">Набор массы</label>
+                </p>
+                <p class="form__target-list">
+                  <input class="form__radio visually-hidden" type="radio" name="program" id="advice" value="Не знаю (Нужен ваш совет)">
+                  <label class="form__label form__label--radio" for="advice">Не знаю (Нужен ваш совет)</label>
+                </p>
+              </div>
+            </section>
+            <section class="form__contacts">
+                <h2 class="form__contacts-title form__title">Контактные данные (владельца кота)</h2>
+                <p class="form__contacts-list">
+                  <label class="form__label form__label--email" for="email">E-mail:*</label>
+                  <input class="form__input form__input--email" type="text" name="email" id="email" placeholder="kuklachev@gmail.com">
+                </p>
+                <p class="form__contacts-list">
+                  <label class="form__label form__label--tel" for="tel">Телефон:*</label>
+                  <input class="form__input form__input--tel" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90">
+                </p>
+            </section>
+            <section class="form__comment">
+              <h2 class="form__comment-title form__title">Комментарий</h2>
+              <label class="form__label visually-hidden" for="comment">Комментарий</label>
+              <textarea class="form__textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </section>
+            <section class="form__additionally">
+              <h2 class="form__additionally-title form__title">Дополнительно</h2>
+              <p class="form__additionally-list">
+                <input class="form__input form__input--sweetener" type="checkbox" name="sweetener" id="sweetener">
+                <label class="form__label form__label--sweetener" for="sweetener">Сахарозаменитель</label>
+              </p>
+              <p class="form__additionally-list">
+                <input class="form__input form__input--water" type="checkbox" name="water" id="water">
+                <label class="form__label form__label--water" for="water">Питьевая вода</label>
+              </p>
+              <p class="form__additionally-list">
+                <input class="form__input form__input--milk" type="checkbox" name="milk" id="milk">
+                <label class="form__label form__label--milk" for="milk">Молоко</label>
+              </p>
+              <p class="form__additionally-list">
+                <input class="form__input form__input--vitamins" type="checkbox" name="vitamins" id="vitamins">
+                <label class="form__label form__label--vitamins" for="vitamins">Витамины</label>
+              </p>
+            </section>
+          </div>
+        </form>
+        <a class="main-form__button btn" href="#">Отправить заявку</a>
+        <span class="main-form__note">* — Обязательные поля</span>
+      </div>
+    </main>
+
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">

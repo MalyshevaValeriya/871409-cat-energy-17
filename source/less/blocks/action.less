@@ -1,0 +1,97 @@
+@media @mobile-width-only {
+  .action {
+    position: relative;
+    margin: 39px 0 35px 0;
+    padding: 172px 55px 25px 56px;
+    background-image: url("../img/gift-photo-mobile@1x.jpg");
+    background-repeat: no-repeat;
+
+    @media @retina {
+      background-image: url("../img/gift-photo-mobile@2x.jpg");
+      background-size: cover;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 65px;
+      right: 111px;
+      .size(56px, 61px);
+      background-image: url("../img/icon-gift.svg");
+    }
+  }
+
+  .action__title {
+    font-family: @arial-font;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: @white;
+  }
+}
+
+@media @tablet-width {
+  .action {
+    position: relative;
+    margin: 67px 0 4px 0;
+    padding: 85px 118px 69px 430px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+      background-size: 100% 200px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 65px;
+      left: 91px;
+      .size(56px, 61px);
+      background-image: url("../img/icon-gift.svg");
+    }
+  }
+
+  .action__title {
+    font-family: @arial-font;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    color: @white;
+  }
+}
+
+@media @desktop-width {
+  .action {
+    position: relative;
+    margin: 0;
+    padding: 188px 38px 43px 41px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+      background-size: cover;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 65px;
+      left: 96px;
+      .size(56px, 61px);
+      background-image: url("../img/icon-gift.svg");
+    }
+  }
+
+  .action__title {
+    width: 165px;
+    margin: 0;
+    font-family: @arial-font;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: @white;
+  }
+}

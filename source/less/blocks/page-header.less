@@ -1,14 +1,9 @@
-.page-header {
-  padding-top: 11px;
-}
-
-.page-header__wrapper {
-  .wrapper();
-  margin: 0 auto;
-}
 
 @media @mobile-width-only {
   .page-header {
+    .wrapper();
+    margin: 0 auto;
+    padding-top: 11px;
     border-bottom: 1px solid @gray-border;
   }
 
@@ -21,6 +16,10 @@
   .page-header {
     margin: 0 auto;
     padding-top: 24px;
+
+    &--catalog {
+      margin-bottom: 30px;
+    }
   }
 
   .page-header__wrapper {
@@ -51,6 +50,11 @@
         background-repeat: no-repeat;
         text-align: center;
         z-index: -1;
+
+        @media @retina {
+          background-image: url("../img/index-background-desktop@2x.jpg");
+          background-size: cover;
+        }
       }
     }
   }
