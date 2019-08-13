@@ -81,14 +81,9 @@
 }
 
 @media @tablet-width {
-  .extra__wrapper {
-    .wrapper();
-  }
-
   .extra__title {
-    margin-top: -77px;
-    margin-bottom: 70px;
-    padding-left: 67px;
+    margin-left: 37px;
+    margin-bottom: 79px;
     font-size: 36px;
     line-height: 36px;
     font-weight: normal;
@@ -114,7 +109,7 @@
   }
 
   .extra__item {
-    padding: 25px 38px 28px 38px;
+    padding: 25px 35px 26px 38px;
     border: 1px solid @gray-border;
 
     &:nth-child(2n) {
@@ -127,16 +122,18 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 27px;
   }
 
   .extra__name {
-    padding-bottom: 25px;
+    margin: 0;
     font-size: 20px;
     line-height: 20px;
     text-transform: uppercase;
   }
 
   .extra__specification {
+    margin: 0;
     font-family: @arial-font;
     font-size: 16px;
     line-height: 20px;
@@ -145,7 +142,12 @@
   }
 
   .extra__size {
+    padding: 0;
     padding-right: 50px;
+  }
+
+  .extra__cost {
+    padding: 0;
   }
 
   .extra__btn {
@@ -158,6 +160,7 @@
 @media @desktop-width {
   .extra {
     .wrapper();
+    padding-top: 22px;
   }
 
   .extra__wrapper {
@@ -168,7 +171,7 @@
   }
 
   .extra__title {
-    margin-top: -64px;
+    margin: 0;
     margin-bottom: 80px;
     padding: 0;
     font-size: 36px;
@@ -205,13 +208,18 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 0;
+    padding: 16px 0 14px 0;
     border: none;
     border-top: 1px solid @gray-border;
 
     &:nth-child(2n) {
       border-top: 1px solid @gray-border;
     }
+  }
+
+  .extra__item-wrapper {
+    margin: 0;
+    margin-left: 2px;
   }
 
   .extra__name {
@@ -237,11 +245,16 @@
   .extra__cost {
     width: 50px;
     text-align: left;
+    padding-top: 6px;
+  }
+
+  .extra__size {
+    padding-top: 6px;
   }
 
   .extra__btn {
     font-size: 16px;
     line-height: 20px;
-    padding: 8px 92px 11px 92px;
+    padding: 10px 90px 11px 92px;
   }
 }

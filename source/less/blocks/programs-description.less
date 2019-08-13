@@ -17,7 +17,6 @@
 }
 
 .programs-description__item {
-
   min-width: 60px;
   margin: 0 0 26px 0;
   padding-left: 80px;
@@ -79,7 +78,9 @@
       background-image: url("../img/advantage-clock@1x.png");
     }
   }
+}
 
+@media @mobile-width-only {
   .programs-description__value {
     margin: 0;
     display: block;
@@ -88,22 +89,33 @@
 }
 
 @media @tablet-width {
+  .programs-description__wrapper {
+    padding-top: 47px;
+    padding-right: 93px;
+  }
+
   .programs-description__title {
-    margin-bottom: 70px;
-    padding-top: 35px;
+    margin-bottom: 72px;
   }
 
   .programs-description__list {
-    padding: 0;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .programs-description__value {
+    margin: 0;
+    max-width: 245px;
   }
 
   .programs-description__item {
     width: 260px;
-    padding: 98px 65px 122px 0;
+    margin-bottom: 132px;
+    padding: 0;
+    padding-top: 112px;
     font-size: 16px;
     line-height: 24px;
     color: @gray;
@@ -137,6 +149,11 @@
         content: "";
         .size(50px, 50px);
         background-image: url("../img/advantage-leaf@1x.png");
+
+        @media @retina {
+          background-image: url("../img/advantage-leaf@2x.png");
+          background-size: cover;
+        }
       }
     }
 
@@ -160,6 +177,11 @@
         content: "";
         .size(50px, 50px);
         background-image: url("../img/advantage-powder@1x.png");
+
+        @media @retina {
+          background-image: url("../img/advantage-powder@2x.png");
+          background-size: cover;
+        }
       }
     }
 
@@ -170,7 +192,7 @@
         font-family: @font;
         font-size: 281px;
         line-height: 281px;
-        top: -34px;
+        top: -37px;
         left: 112px;
         color: @gray-light;
         z-index: -1;
@@ -183,6 +205,11 @@
         content: "";
         .size(50px, 50px);
         background-image: url("../img/advantage-dining@1x.png");
+
+        @media @retina {
+          background-image: url("../img/advantage-dining@2x.png");
+          background-size: cover;
+        }
       }
     }
 
@@ -206,6 +233,11 @@
         content: "";
         .size(50px, 50px);
         background-image: url("../img/advantage-clock@1x.png");
+
+        @media @retina {
+          background-image: url("../img/advantage-clock@2x.png");
+          background-size: cover;
+        }
       }
     }
   }
@@ -217,13 +249,18 @@
     margin: 0 auto;
   }
 
+  .programs-description__wrapper {
+    padding-top: 74px;
+    padding-right: 40px;
+    padding-bottom: 90px;
+  }
+
   .programs-description__title {
-    padding-top: 61px;
     margin-bottom: 72px;
   }
 
   .programs-description__item {
     width: 245px;
-    padding: 96px 0 45px 0;
+    margin-bottom: 0;
   }
 }

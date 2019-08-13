@@ -52,20 +52,26 @@
 @media @tablet-width {
   .main-content {
     margin: 0 auto;
-    margin-bottom: -32px;
   }
 
   .main-content__wrapper {
     .wrapper();
+    margin: 0;
     position: relative;
+    padding-top: 55px;
     background-image: none;
     background-color: transparent;
   }
 
-  .main-content__title {
+  .main-content__header {
+    display: block;
+    width: 450px;
     margin-left: 88px;
-    margin-right: 200px;
-    padding-top: 15px;
+  }
+
+  .main-content__title {
+    margin: 0;
+    margin-bottom: 42px;
     text-align: left;
     font-size: 60px;
     line-height: 60px;
@@ -74,8 +80,6 @@
   }
 
   .main-content__slogan {
-    margin-left: 89px;
-    margin-right: 200px;
     text-align: left;
     font-size: 20px;
     line-height: 20px;
@@ -93,7 +97,7 @@
   .main-content__button {
     position: absolute;
     left: 120px;
-    top: 244px;
+    top: 285px;
     padding: 16px 28px 15px 25px;
     font-size: 20px;
     line-height: 20px;
@@ -103,11 +107,20 @@
 @media @desktop-width {
   .main-content {
     width: 1300px;
-    margin-top: 92px;
+  }
+
+  .main-content__wrapper {
+    display: flex;
+    position: relative;
+    margin-bottom: 55px;
+    padding-top: 105px;
+  }
+
+  .main-content__header {
+    margin-left: 80px;
   }
 
   .main-content__title {
-    margin-left: 82px;
     max-width: 540px;
     text-align: left;
     font-size: 60px;
@@ -117,7 +130,6 @@
   }
 
   .main-content__slogan {
-    margin-left: 82px;
     text-align: left;
     font-size: 20px;
     line-height: 20px;
@@ -125,20 +137,18 @@
     color: @black;
   }
 
-  .main-content__wrapper {
-    position: relative;
-  }
-
   .main-content__image {
+    margin: 0;
+    padding: 0;
     .size(552px, 499px);
-    position: absolute;
-    top: -65px;
-    left: 491px;
+    position: relative;
+    top: -80px;
+    left: -80px;
   }
 
   .main-content__button {
     margin-left: 70px;
-    top: 249px;
-    left: 52px;
+    top: 340px;
+    left: 50px;
   }
 }
