@@ -17,17 +17,26 @@
 }
 
 @media @tablet-width {
+
   .logo {
     margin-right: 96px;
   }
 
-  .logo__logo-image {
-    .size(174px, 59px);
-  }
+
 }
 
 @media @desktop-width {
   .logo__logo-image {
     .size(203px, 60px);
+
+
+    &:hover {
+      opacity: 0.8;
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+
   }
 }

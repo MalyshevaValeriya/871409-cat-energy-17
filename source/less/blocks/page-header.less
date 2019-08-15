@@ -8,6 +8,12 @@
 }
 
 @media @mobile-width-only {
+
+  .page-header {
+    border-bottom: 1px solid @gray-border;
+  }
+
+
   .page-header__logo {
     padding-bottom: 14px;
   }
@@ -29,16 +35,36 @@
 
 @media @desktop-width {
   .page-header {
-    padding-top: 53px;
+
+    padding-top: 0;
+    width: 1300px;
+
 
     &--index {
       .site-list__item a {
         color: @white;
       }
+
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 50%;
+        .size(50%, 696px);
+        background-image: url("../img/index-background-desktop@1x.jpg");
+        background-repeat: no-repeat;
+        text-align: center;
+        z-index: -1;
+      }
+
     }
   }
 
   .page-header__wrapper {
+
+    padding-top: 53px;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
