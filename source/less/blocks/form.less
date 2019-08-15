@@ -16,7 +16,8 @@
   }
 
   &--email {
-    margin-right: 5px;
+    width: 76px;
+    margin-right: 12px;
   }
 
   &--tel {
@@ -76,7 +77,6 @@
   }
 }
 
-
 .form__title {
   margin: 0;
   font-size: 24px;
@@ -128,11 +128,23 @@
 }
 
 .form__contacts {
+  position: relative;
   padding-top: 28px;
+
+  &::before {
+    position: absolute;
+    right: -20px;
+    top: 42px;
+    content: "";
+    .size(100px, 3px);
+    background-color: @green;
+  }
 }
 
 .form__contacts-title {
+  display: block;
   width: 190px;
+  margin: 0;
   margin-bottom: 35px;
 }
 
@@ -144,7 +156,17 @@
 }
 
 .form__comment {
+  position: relative;
   padding-top: 14px;
+
+  &::before {
+    position: absolute;
+    right: -20px;
+    top: 27px;
+    content: "";
+    .size(158px, 3px);
+    background-color: @green;
+  }
 }
 
 .form__comment-title {
@@ -163,8 +185,18 @@
 }
 
 .form__additionally {
+  position: relative;
   padding-top: 25px;
   padding-bottom: 17px;
+
+  &::before {
+    position: absolute;
+    right: -20px;
+    top: 39px;
+    content: "";
+    .size(136px, 3px);
+    background-color: @green;
+  }
 }
 
 .form__additionally-title {
