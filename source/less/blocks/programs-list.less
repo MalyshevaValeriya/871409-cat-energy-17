@@ -15,18 +15,19 @@
 
 .programs-list__description {
   margin: 0;
-  padding-bottom: 41px;
+  padding-bottom: 20px;
   font-family: @arial-font;
   font-size: 14px;
   line-height: 18px;
   color: @gray;
+  border-bottom: 1px solid @gray-air;
 }
 
 @media @mobile-width-only {
   .programs-list__item {
     position: relative;
     margin-top: 19px;
-    padding: 31px 20px 22px;
+    padding: 31px 20px 21px;
     background-color: @gray-light;
 
     &:first-child {
@@ -60,7 +61,7 @@
         position: absolute;
         content: "";
         top: 12px;
-        left: -10px;
+        left: -9px;
         .size(67px, 28px);
         background-image: url("../img/icon-cat-pro.svg");
         background-position: center;
@@ -72,6 +73,7 @@
   .programs-list__link {
     display: block;
     position: relative;
+    padding-top: 21px;
     font-size: 16px;
     line-height: 16px;
     color: @black;
@@ -80,7 +82,7 @@
     &::after {
       position: absolute;
       content: "";
-      top: 2px;
+      top: 22px;
       left: 95px;
       .size(25px, 12px);
       background-image: url("../img/icon-right-arrow-long.svg");
@@ -122,6 +124,7 @@
     font-size: 16px;
     line-height: 24px;
     color: @gray;
+    border: none;
 
     &--pro {
       width: 340px;
@@ -171,6 +174,10 @@
     color: @black;
     text-transform: uppercase;
 
+    &:active {
+      opacity: 0.3;
+    }
+
     &::after {
       position: absolute;
       content: "";
@@ -182,6 +189,11 @@
   }
 }
 
+.programs-list__link:focus::before,
+.programs-list__link:hover::before {
+  background-image: url("../img/icon-right-arrow-long.svg");
+}
+
 @media @desktop-width {
   .programs-list__wrapper {
     display: flex;
@@ -191,7 +203,6 @@
   }
 
   .programs-list__item {
-
     margin-right: 80px;
     padding-top: 75px;
     padding-left: 52px;

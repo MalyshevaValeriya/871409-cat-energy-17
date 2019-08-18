@@ -1,14 +1,20 @@
 @media @mobile-width-only {
   .action {
     position: relative;
-    margin: 39px 0 35px 0;
+    margin: 39px 0 0 0;
     padding: 172px 55px 25px 56px;
-    background-image: url("../img/gift-photo-mobile@1x.jpg");
+    background-image: url("../img/gift-photo-mobile@1x.jpg"), linear-gradient(@green 289px, #ffffff 1px);
     background-repeat: no-repeat;
+    background-size: 320px auto, auto;
+    background-position: top center;
+    text-align: center;
 
     @media @retina {
-      background-image: url("../img/gift-photo-mobile@2x.jpg");
-      background-size: cover;
+      background-image: url("../img/gift-photo-mobile@2x.jpg"), linear-gradient(@green 289px, #ffffff 1px);
+      background-repeat: no-repeat;
+      background-size: 320px auto, auto;
+      background-position: top center;
+      text-align: center;
     }
 
     &::before {

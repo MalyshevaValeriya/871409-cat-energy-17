@@ -8,18 +8,20 @@
     display: flex;
     flex-direction: column;
     .wrapper();
-    margin-bottom: 20px;
+    padding-bottom: 21px;
     padding-top: 26px;
-    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(@green 305px, #ffffff 1px);
     background-repeat: no-repeat;
-    background-size: 100% 305px;
+    background-size: 320px auto, auto;
+    background-position: top center;
     text-align: center;
 
     @media @retina {
-      background-image: url("../img/index-background-mobile@2x.jpg");
-      background-repeat: no-repeat;
-      background-size: 100% 305px;
       text-align: center;
+      background-image: url("../img/index-background-mobile@2x.jpg"), linear-gradient(@green 305px, #ffffff 1px);
+      background-repeat: no-repeat;
+      background-size: 320px auto, auto;
+      background-position: top center;
     }
   }
 
@@ -43,7 +45,7 @@
   }
 
   .main-content__button {
-    padding: 12px 24px;
+    padding: 11px 24px;
     font-size: 14px;
     line-height: 18px;
   }
@@ -106,7 +108,6 @@
 
 @media @desktop-width {
   .main-content {
-
     width: 1300px;
   }
 
