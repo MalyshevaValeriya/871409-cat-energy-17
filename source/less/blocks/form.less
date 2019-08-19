@@ -188,10 +188,26 @@
 }
 
 .form__contacts-list {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 14px 0;
+}
+
+.form__contacts-icon {
+  position: absolute;
+  content: "";
+
+  &--mail {
+    top: 15px;
+    right: 15px;
+  }
+
+  &--tel {
+    top: 13px;
+    right: 13px;
+  }
 }
 
 .form__comment {
@@ -226,11 +242,11 @@
   border: 1px solid @gray-border;
   .size(100%, 123px);
 
-  &:hover {
+  &:hover,
+  &:focus {
     border: 1px solid #cdcdcd;
   }
 
-  &:focus,
   &:active {
     outline: 2px solid @black;
   }
@@ -419,7 +435,7 @@
 
   .form__contacts-title {
     width: 515px;
-    margin-bottom: 57px;
+    margin-bottom: 58px;
     margin-left: -40px;
     padding-left: 39px;
     padding-right: 36px;
@@ -428,6 +444,18 @@
 
   .form__contacts-list {
     margin: 18px 0;
+  }
+
+  .form__contacts-icon {
+    &--mail {
+      top: 21px;
+      right: 19px;
+    }
+
+    &--tel {
+      top: 17px;
+      right: 15px;
+    }
   }
 
   .form__comment {
@@ -524,6 +552,10 @@
     flex-wrap: nowrap;
   }
 
+  .form__input {
+    padding: 12px 15px 13px 18px;
+  }
+
   .form__profile {
     width: 570px;
     padding-bottom: 0;
@@ -605,6 +637,18 @@
       width: 100vw;
       left: -80px;
       top: 90px;
+    }
+  }
+
+  .form__contacts-icon {
+    &--mail {
+      top: 21px;
+      right: 20px;
+    }
+
+    &--tel {
+      top: 18px;
+      right: 18px;
     }
   }
 

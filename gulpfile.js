@@ -23,7 +23,7 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(csso())
-    .pipe(rename("style.min.css"))
+
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(server.stream());
@@ -60,7 +60,6 @@ gulp.task("server", function () {
     cors: true,
     ui: false
   });
-
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
   gulp.watch("source/*.html").on("change", server.reload);
