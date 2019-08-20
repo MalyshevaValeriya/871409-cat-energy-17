@@ -15,7 +15,7 @@ var navToggle = document.querySelector('.main-nav__toggle');
 
 
 
-
+/*
 if (document.documentElement.clientWidth>=1300) {
 
 
@@ -70,3 +70,4 @@ sliderItemAfter.style.clip="rect(0px,690px,517px,"+sliderItemAfter.width*(1-scal
 
 
   console.log(2)}
+*/

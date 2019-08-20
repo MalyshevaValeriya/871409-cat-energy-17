@@ -20,6 +20,16 @@
 
 .copyright__logo {
   fill: @gray;
+
+  &:hover,
+  &:focus {
+    fill: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
 }
 
 @media @tablet-width {
@@ -32,21 +42,15 @@
   }
 
   .copyright__logo {
-    margin-left: 20px;
-    .size(60px, 40px);
-
+    margin-left: 16px;
+    margin-right: -7px;
+    .size(40px, 40px);
     opacity: 0.8;
   }
 }
 
 @media @desktop-width {
   .copyright {
-    margin-right: -5px;
-  }
-
-  .copyright__logo {
-    margin-left: 15px;
-    .size(40px, 47px);
-    opacity: 0.8;
+    margin: 0;
   }
 }

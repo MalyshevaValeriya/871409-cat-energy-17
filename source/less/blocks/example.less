@@ -66,12 +66,13 @@
 
 @media @tablet-width {
   .example {
+    padding-bottom: 35px;
     background-color: transparent;
   }
 
   .example__wrapper {
     padding-top: 43px;
-    padding-bottom: 18px;
+    padding-bottom: 36px;
   }
 
   .example__title {
@@ -124,6 +125,31 @@
 }
 
 @media @desktop-width {
+  .example {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 462px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to right, #f2f2f2 56%, #eaeaea 44%);
+      z-index: -1;
+    }
+  }
+
+  .example__wrapper {
+    max-width: 40%;
+    margin: 0;
+  }
+
+  .example__container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
   .example__wrapper {
     padding-top: 57px;
     padding-bottom: 18px;
@@ -139,5 +165,9 @@
     margin: 0;
     margin-bottom: 68px;
     padding: 0;
+  }
+
+  .example__target-discription {
+    background-color: @gray-light;
   }
 }

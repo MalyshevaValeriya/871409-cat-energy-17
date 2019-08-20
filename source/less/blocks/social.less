@@ -19,6 +19,15 @@
 
 .social__logo {
   fill: @gray;
+
+  &:hover,
+  &:focus {
+    fill: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media @tablet-width {
@@ -48,7 +57,6 @@
 
     &--instagram {
       .size(23px, 23px);
-      opacity: 0.6;
     }
 
     &--facebook {
