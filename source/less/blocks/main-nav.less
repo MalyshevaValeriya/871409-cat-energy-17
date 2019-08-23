@@ -5,10 +5,11 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: -55px;
-  right: -10px;
+  top: -42px;
+  right: 0;
   display: block;
-  .size(50px, 50px);
+  padding: 0;
+  .size(25px, 19px);
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -19,25 +20,23 @@
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-
-  top: 12px;
-  right: 9px;
-
+  top: 0;
+  right: 0;
   .size(24px, 2px);
   background-color: @black;
   box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
 }
 
 .main-nav--opened .main-nav__toggle {
-  top: -35px;
-  right: -26px;
+  top: -40px;
+  right: 0;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 5px;
+    right: 0;
     .size(24px, 2px);
     background-color: @black;
   }
@@ -79,13 +78,11 @@
   .main-nav {
     width: auto;
     margin: 0;
-
   }
 
   .main-nav__wrapper {
     margin: 0 auto;
     padding: 0;
-
   }
 
   .main-nav__toggle {
@@ -93,9 +90,7 @@
   }
 
   .main-nav__list {
-
     margin: 0;
     padding: 0;
-
   }
 }

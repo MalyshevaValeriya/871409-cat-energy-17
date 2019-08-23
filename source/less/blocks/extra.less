@@ -1,0 +1,258 @@
+.extra {
+  .wrapper();
+  position: relative;
+  padding-top: 29px;
+  padding-bottom: 36px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: @green;
+    .size(100%, 3px);
+    right: 0;
+    top: 42px;
+    z-index: -1;
+  }
+}
+
+.extra__title {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 33px;
+  margin-left: -20px;
+  padding-left: 20px;
+  padding-right: 22px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: normal;
+  background-color: @white;
+}
+
+.extra__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.extra__item {
+  padding: 14px 1px 17px 1px;
+  border-top: 1px solid @gray-border;
+  box-sizing: inherit;
+
+  &:last-child {
+    border-bottom: 1px solid @gray-border;
+  }
+}
+
+.extra__name {
+  margin-bottom: 13px;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.extra__specification {
+  margin-bottom: 14px;
+  font-family: @arial-font;
+  font-size: 14px;
+  line-height: 14px;
+  color: @gray;
+  border-collapse: collapse;
+}
+
+@media @mobile-width-only {
+  .extra__item-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .extra__size {
+    padding: 0;
+    text-align: left;
+  }
+
+  .extra__cost {
+    padding: 0;
+    text-align: right;
+  }
+
+  .extra__btn {
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 11px 0;
+    text-align: center;
+    box-sizing: inherit;
+  }
+}
+
+@media @tablet-width {
+  .extra {
+    padding-bottom: 70px;
+
+    &::before {
+      width: 100vw;
+      right: 0;
+      top: 52px;
+      z-index: -1;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: @green;
+      .size(100vw, 3px);
+      left: -40px;
+      top: 52px;
+      z-index: -1;
+    }
+  }
+
+  .extra__title {
+    margin-bottom: 80px;
+    margin-left: 0;
+    padding-left: 37px;
+    padding-right: 35px;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: normal;
+  }
+
+  .extra__item {
+    padding: 24px 36px 27px 38px;
+    border: 1px solid @gray-border;
+
+    &:nth-child(2n) {
+      border-top: none;
+    }
+  }
+
+  .extra__item-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+  }
+
+  .extra__name {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .extra__specification {
+    margin: 0;
+    margin-top: 5px;
+    font-family: @arial-font;
+    font-size: 16px;
+    line-height: 20px;
+    color: @gray;
+    border-collapse: collapse;
+  }
+
+  .extra__size {
+    padding: 0;
+    padding-right: 50px;
+  }
+
+  .extra__cost {
+    padding: 0;
+  }
+
+  .extra__btn {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 285px;
+  }
+}
+
+@media @desktop-width {
+  .extra {
+    .wrapper();
+    padding-top: 32px;
+  }
+
+  .extra__wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+
+  .extra__title {
+    margin: 0;
+    margin-bottom: 80px;
+    margin-left: -20px;
+    padding: 0;
+    padding-right: 40px;
+    padding-left: 20px;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: normal;
+  }
+
+  .extra__list {
+    width: 895px;
+    margin-right: 80px;
+  }
+
+  .extra__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0 14px 0;
+    border: none;
+    border-top: 1px solid @gray-border;
+
+    &:nth-child(2n) {
+      border-top: 1px solid @gray-border;
+    }
+  }
+
+  .extra__item-wrapper {
+    margin: 0;
+    margin-left: 2px;
+  }
+
+  .extra__name {
+    width: 245px;
+    margin: 0;
+    margin-right: 80px;
+    padding: 0;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .extra__specification {
+    width: 295px;
+    margin: 0;
+    font-family: @arial-font;
+    font-size: 16px;
+    line-height: 20px;
+    color: @gray;
+    border-collapse: collapse;
+  }
+
+  .extra__cost {
+    width: 50px;
+    text-align: left;
+    padding-top: 6px;
+  }
+
+  .extra__size {
+    padding-top: 6px;
+  }
+
+  .extra__btn {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 90px 11px 92px;
+  }
+}

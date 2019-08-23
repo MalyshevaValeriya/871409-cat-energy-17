@@ -1,23 +1,22 @@
-.all-products__wrapper {
-  margin-left: 20px;
+.all-products {
+  padding-top: 80px;
 }
 
 .all-products__title {
   position: relative;
   margin: 0;
-  margin-left: 40px;
-  margin-bottom: 5px;
-  padding-top: 80px;
+  margin-bottom: 3px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
+  text-align: center;
   text-transform: uppercase;
 
   &::before {
     position: absolute;
     content: "";
-    top: 27px;
-    left: 85px;
+    top: -54px;
+    left: 125px;
     .size(31px, 31px);
     background-image: url("../img/icon-plus.svg");
     opacity: 0.5;
@@ -33,50 +32,47 @@
   color: @gray;
 }
 
-
-.all-products__btn {
-  display: inline-block;
-  margin-top: 20px;
-  margin-bottom: 25px;
-  padding: 10px 95px 10px 95px;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  text-align: center;
-  vertical-align: middle;
-  background-color: @gray-light;
-  color: @black;
+@media @mobile-width-only {
+  .all-products__btn {
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 11px 0 10px 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    background-color: @gray-light;
+    color: @black;
+  }
 }
 
 
 @media @tablet-width {
+  .all-products {
+    background-color: transparent;
+  }
+
   .all-products__wrapper {
-    margin-left: 0;
     display: flex;
     flex-direction: column;
+    padding-top: 165px;
   }
 
   .all-products__title {
-    position: relative;
     max-width: 140px;
     margin: 0 auto;
-
-    padding: 162px 30px 27px 35px;
-
-
+    margin-bottom: 25px;
     font-size: 20px;
     line-height: 20px;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
+
 
     &::before {
       position: absolute;
       content: "";
-
-      top: 50px;
-      left: 95px;
-
+      top: -112px;
+      left: 43px;
       .size(61px, 61px);
       background-image: url("../img/icon-plus.svg");
       opacity: 0.2;
@@ -84,11 +80,8 @@
   }
 
   .all-products__taste {
-
-    margin: 0;
-    padding-bottom: 90px;
-    padding-left: 75px;
-
+    margin: 0 auto;
+    margin-bottom: 90px;
     max-width: 170px;
     font-family: @arial-font;
     font-size: 16px;
@@ -99,7 +92,7 @@
 
   .all-products__btn {
     display: inline-block;
-    padding: 10px 74px 10px 78px;
+    padding: 10px 77px 10px 78px;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
@@ -108,38 +101,39 @@
     margin: 0 38px;
     background-color: @gray-light;
     color: @black;
+
+    &:hover,
+    &:focus {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 }
 
 
 @media @desktop-width {
+  .all-products__wrapper {
+    padding: 0;
+    padding-bottom: 40px;
+  }
+
   .all-products__title {
-    position: relative;
     max-width: 135px;
     margin: 0 auto;
-    padding: 165px 5px 28px 10px;
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
+    margin-bottom: 27px;
 
     &::before {
-      position: absolute;
-      content: "";
-      top: 55px;
-      left: 46px;
-      .size(61px, 61px);
-      background-image: url("../img/icon-plus.svg");
-      opacity: 0.2;
+      top: -110px;
+      left: 38px;
     }
   }
 
   .all-products__taste {
-
-    margin: 0;
-    padding-bottom: 88px;
-    padding-left: 38px;
+    margin: 0 auto;
+    margin-bottom: 88px;
     max-width: 170px;
     font-family: @arial-font;
     font-size: 16px;

@@ -1,0 +1,251 @@
+.slider__wrapper {
+  padding-bottom: 37px;
+}
+
+.slider__title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.slider__results {
+  position: relative;
+  .size(100%, 240px);
+  padding-top: 35px;
+}
+
+.slider__item {
+  position: absolute;
+  .size(100%, 100%);
+
+  &--after {
+    position: relative;
+  }
+}
+
+.slider__img {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+
+  &--before {
+    position: absolute;
+  }
+
+  &--after {
+    display: none;
+    position: absolute;
+  }
+}
+
+.slider__option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  padding-left: 4px;
+}
+
+.slider__input {
+  display: none;
+}
+
+.slider__label {
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.slider__range-controls {
+  .size(84px, 14px);
+  padding: 3px 6px;
+  margin: 0 16px 0 19px;
+  background-color: @white;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.slider__toggle {
+  width: 50%;
+  height: 6px;
+  border-radius: 3px;
+  background-color: @green;
+}
+
+@media @tablet-width {
+  .slider__wrapper {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 462px;
+      left: 0;
+      right: 0;
+      bottom: -35px;
+      background: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
+      z-index: -1;
+    }
+  }
+
+  .slider__title {
+    position: absolute;
+    width: 175px;
+    top: -97px;
+    right: 31px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .slider__title span {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .slider__results {
+    position: relative;
+    .size(100%, 520px);
+    margin-bottom: 18px;
+    padding-top: 50px;
+  }
+
+  .slider__item {
+    display: block;
+    margin-left: 45px;
+
+    &--before {
+      width: 50%;
+    }
+
+    &--after {
+      margin-right: 50%;
+      width: 50%;
+    }
+  }
+
+  .slider__img {
+    max-width: none;
+    margin: 0 auto;
+    padding: 0;
+
+    &--before {
+      clip: rect(0, 338px, 517px, 0);
+    }
+
+    &--after {
+      display: block;
+      clip: rect(0, 690px, 517px, 338px);
+    }
+  }
+
+  .slider__label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .slider__option {
+    width: 585px;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .slider__range-controls {
+    position: relative;
+    .size(428px, 6px);
+    padding: 3px 6px;
+    margin: 0 25px 0 19px;
+    background-color: #dcdcdc;
+    border: none;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  .slider__toggle {
+    position: absolute;
+    content: "";
+    .size(34px, 34px);
+    top: -16px;
+    left: 47%;
+    background-color: @white;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    box-sizing: border-box;
+
+    &::before {
+      position: relative;
+      display: block;
+      content: "";
+      .size(8px, 8px);
+      top: 13px;
+      left: 39%;
+      background-color: @green;
+      border-radius: 50%;
+      z-index: 1;
+    }
+  }
+}
+
+
+@media @desktop-width {
+  .slider {
+    margin-left: 80px;
+  }
+
+  .slider__wrapper {
+    &::after {
+      background: linear-gradient(to right, #f2f2f2 56%, #eaeaea 44%);
+    }
+  }
+
+  .slider__results {
+    margin-left: 15px;
+    margin-bottom: 38px;
+    padding-top: 0;
+  }
+
+  .slider__option {
+    margin-left: 90px;
+  }
+
+  .slider__title {
+    display: flex;
+    justify-content: space-between;
+    width: 330px;
+    top: 558px;
+    left: -555px;
+  }
+
+  .slider__title span {
+    display: inline-block;
+    margin: 0;
+    margin-left: 64px;
+  }
+
+  .slider__img {
+    &--before {
+      clip: rect(0, 365px, 517px, 0);
+    }
+
+    &--after {
+      display: block;
+      clip: rect(0, 690px, 517px, 365px);
+    }
+  }
+
+  .slider__toggle {
+    top: -14px;
+  }
+
+  .slider__label {
+    padding-bottom: 6px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.23);
+  }
+}
