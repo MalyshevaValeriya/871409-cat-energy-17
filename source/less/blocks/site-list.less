@@ -18,17 +18,20 @@
 @media @mobile-width-only {
   .site-list a {
     display: block;
-    margin-left: -20px;
-    margin-right: -20px;
     padding: 22px 25px 23px 25px;
     text-align: center;
     border-top: 1px solid @gray-border;
   }
 
-  .site-list__item:last-child {
+  .site-list__item {
     margin-left: -20px;
     margin-right: -20px;
-    border-bottom: 1px solid @gray-border;
+
+    &:last-child {
+      margin-left: -20px;
+      margin-right: -20px;
+      border-bottom: 1px solid @gray-border;
+    }
   }
 }
 
