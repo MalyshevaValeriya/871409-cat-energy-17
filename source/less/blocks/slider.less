@@ -1,5 +1,5 @@
 .slider__wrapper {
-  padding-bottom: 37px;
+  padding-bottom: 34px;
 }
 
 .slider__title {
@@ -19,11 +19,6 @@
 
 .slider__item {
   position: absolute;
-  .size(100%, 100%);
-
-  &--after {
-    position: relative;
-  }
 }
 
 .slider__img {
@@ -45,7 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 32px;
+  margin-top: 28px;
   padding-left: 4px;
 }
 
@@ -57,6 +52,16 @@
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.23);
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.23);
+  }
+
+  &:active {
+    border-bottom: 1px solid transparent;
+  }
 }
 
 .slider__range-controls {
@@ -76,9 +81,23 @@
   background-color: @green;
 }
 
+@media @mobile-width-only {
+  .slider__img {
+    &--before {
+      clip: rect(0, 311px, 232px, 0);
+    }
+
+    &--after {
+      display: block;
+      clip: rect(0, 320px, 311px, 232px);
+    }
+  }
+}
+
 @media @tablet-width {
   .slider__wrapper {
     position: relative;
+    padding-bottom: 38px;
     z-index: 1;
 
     &::after {
@@ -87,7 +106,7 @@
       height: 462px;
       left: 0;
       right: 0;
-      bottom: -35px;
+      bottom: -38px;
       background: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
       z-index: -1;
     }
@@ -111,7 +130,7 @@
   .slider__results {
     position: relative;
     .size(100%, 520px);
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     padding-top: 50px;
   }
 
@@ -190,18 +209,27 @@
       border-radius: 50%;
       z-index: 1;
     }
+
+    :hover,
+    &:focus {
+      box-shadow: 0 3px 5px 0 #00000040;
+    }
+
+    &:active {
+      border: 2px solid @green;
+    }
   }
 }
 
 
 @media @desktop-width {
   .slider {
-    margin-left: 80px;
+    margin-left: 35px;
   }
 
   .slider__wrapper {
     &::after {
-      background: linear-gradient(to right, #f2f2f2 56%, #eaeaea 44%);
+      background: linear-gradient(to right, #f2f2f2 59%, #eaeaea 41%);
     }
   }
 
@@ -212,15 +240,15 @@
   }
 
   .slider__option {
-    margin-left: 90px;
+    margin-left: 132px;
   }
 
   .slider__title {
     display: flex;
     justify-content: space-between;
     width: 330px;
-    top: 558px;
-    left: -555px;
+    top: 560px;
+    left: -510px;
   }
 
   .slider__title span {
@@ -241,11 +269,10 @@
   }
 
   .slider__toggle {
-    top: -14px;
+    top: -16px;
   }
 
   .slider__label {
     padding-bottom: 6px;
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.23);
   }
 }
