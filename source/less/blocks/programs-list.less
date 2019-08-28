@@ -207,6 +207,28 @@
       .size(25px, 12px);
       background-image: url("../img/icon-right-arrow-long.svg");
     }
+    &::after {
+      display: block;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: inline-block;
+        position: absolute;
+        content: "";
+        top: 5px;
+        left: 128px;
+        .size(34px, 12px);
+        background-image: url("../img/icon-right-arrow-verylong.svg");
+      }
+    }
+  }
+}
 
     &::after {
       display: block;
@@ -249,7 +271,6 @@
     &:first-child {
       margin-top: 55px;
     }
-
 
     &:nth-child(2n) {
       margin-right: 0;
@@ -303,7 +324,7 @@
   }
 
   .programs-list__link {
-    &::after {
+    &::before {
       top: 4px;
       left: 130px;
     }
