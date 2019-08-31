@@ -1,8 +1,4 @@
 .copyright {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -14,8 +10,15 @@
 }
 
 .copyright__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin: 0;
-  text-align: left;
+  margin-right: -7px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__logo {
@@ -40,6 +43,10 @@
     border: none;
   }
 
+  .copyright__link {
+    margin: 0;
+  }
+
   .copyright__logo {
     margin-left: 16px;
     margin-right: -7px;
@@ -50,6 +57,7 @@
 
 @media @desktop-width {
   .copyright {
+    width: 163px;
     margin: 0;
   }
 }

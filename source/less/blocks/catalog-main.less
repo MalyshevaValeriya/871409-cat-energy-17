@@ -23,10 +23,6 @@
   border-top: 1px solid @gray-border;
 }
 
-.catalog-main__item:last-child {
-  border-bottom: 1px solid @gray-border;
-}
-
 .catalog-main__title {
   margin: 14px 20px 28px 20px;
   padding-bottom: 3px;
@@ -34,10 +30,10 @@
 
 @media @tablet-width {
   .catalog-main__wrapper {
-    padding-left: 32px;
+    padding-left: 30px;
     padding-right: 28px;
     margin: 0 auto;
-    padding-top: 55px;
+    padding-top: 56px;
     padding-bottom: 40px;
   }
 
@@ -57,18 +53,13 @@
   .catalog-main__item {
     border-top: none;
     background-color: @gray-light;
-
-    &:last-child {
-      background-color: transparent;
-      border: 1px solid @gray-border;
-    }
   }
 }
 
 @media @desktop-width {
   .catalog-main__wrapper {
     .wrapper();
-    padding-top: 72px;
+    padding-top: 73px;
   }
 
   .catalog-main__title {

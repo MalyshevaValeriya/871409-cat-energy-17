@@ -97,6 +97,10 @@
   border-color: #bcbcbc;
 }
 
+.form__radio:disabled + label {
+  opacity: 0.3;
+}
+
 
 .form__title {
   margin: 0;
@@ -114,7 +118,7 @@
   outline: none;
 
   &:hover {
-    border: 1px solid #cdcdcd;
+    outline: 1px solid #cdcdcd;
   }
 
   &:focus,
@@ -242,12 +246,12 @@
   border: 1px solid @gray-border;
   .size(100%, 123px);
 
-  &:hover,
-  &:focus {
+  &:hover {
     border: 1px solid #cdcdcd;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     outline: 2px solid @black;
   }
 }
@@ -292,7 +296,7 @@
   .form__wrapper {
     padding-left: 41px;
     padding-right: 37px;
-    padding-bottom: 11px;
+    padding-bottom: 10px;
   }
 
   .form__label {
@@ -435,7 +439,7 @@
 
   .form__contacts-title {
     width: 515px;
-    margin-bottom: 58px;
+    margin-bottom: 57px;
     margin-left: -40px;
     padding-left: 39px;
     padding-right: 36px;
@@ -477,7 +481,7 @@
 
     &::after {
       position: absolute;
-      left: -71px;
+      left: -70px;
       top: 58px;
       content: "";
       .size(100%, 3px);
@@ -517,7 +521,7 @@
 
     &::after {
       position: absolute;
-      left: -71px;
+      left: -70px;
       top: 75px;
       content: "";
       .size(100%, 3px);
@@ -561,7 +565,7 @@
   }
 
   .form__input {
-    padding: 12px 15px 10px 18px;
+    padding: 10px 15px 11px 18px;
   }
 
   .form__profile {
@@ -613,12 +617,12 @@
       padding: 10px 0 0 87px;
 
       &::before {
-        top: 5px;
+        top: 3px;
         left: 27px;
       }
 
       &::after {
-        top: 18px;
+        top: 16px;
         left: 39px;
       }
     }
@@ -642,13 +646,13 @@
 
     &::before {
       width: 100vw;
-      right: -70px;
+      right: -40px;
       top: 90px;
     }
 
     &::after {
       width: 100vw;
-      left: -80px;
+      left: -40px;
       top: 90px;
     }
   }
@@ -687,13 +691,13 @@
 
     &::before {
       width: 100vw;
-      right: -70px;
+      right: -40px;
       top: 58px;
     }
 
     &::after {
       width: 100vw;
-      left: -80px;
+      left: -40px;
       top: 58px;
     }
   }
@@ -705,16 +709,16 @@
 
   .form__additionally-wrapper {
     justify-content: flex-start;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
   .form__additionally-list {
-    width: 245px;
+    width: 200px;
     margin-left: 40px;
     margin-bottom: 35px;
-    margin-right: 80px;
+    margin-right: 85px;
 
-    &:last-child {
+    &:nth-child(4n) {
       margin-right: 0;
     }
   }
@@ -724,13 +728,13 @@
 
     &::before {
       width: 100vw;
-      right: -70px;
+      right: -40px;
       top: 75px;
     }
 
     &::after {
       width: 100vw;
-      left: -71px;
+      left: -40px;
       top: 75px;
     }
   }
