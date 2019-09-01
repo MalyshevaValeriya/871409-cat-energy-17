@@ -1,0 +1,315 @@
+.programs-list__wrapper {
+  .wrapper();
+}
+
+.programs-list__title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding-left: 70px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 37px;
+  color: @black;
+  text-transform: uppercase;
+}
+
+.programs-list__description {
+  margin: 0;
+  padding-bottom: 20px;
+  font-family: @arial-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: @gray;
+  border-bottom: 1px solid @gray-air;
+}
+
+@media @mobile-width-only {
+  .programs-list__item {
+    position: relative;
+    margin-top: 19px;
+    padding: 31px 20px 21px;
+    background-color: @gray-light;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .programs-list__logo {
+    position: absolute;
+    top: 25px;
+    left: 22px;
+    .size(50px, 51px);
+    background-color: @green;
+    border-radius: 50%;
+
+    &--slim {
+      &::after {
+        position: absolute;
+        content: "";
+        top: -2px;
+        left: 8px;
+        .size(35px, 49px);
+        background-image: url("../img/icon-cat-slim.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--pro {
+      &::after {
+        position: absolute;
+        content: "";
+        top: 12px;
+        left: -9px;
+        .size(67px, 28px);
+        background-image: url("../img/icon-cat-pro.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .programs-list__link {
+    display: block;
+    position: relative;
+    padding-top: 21px;
+    font-size: 16px;
+    line-height: 16px;
+    color: @black;
+    text-transform: uppercase;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 22px;
+      left: 95px;
+      .size(25px, 12px);
+      background-image: url("../img/icon-right-arrow-long.svg");
+    }
+
+    &::after {
+      display: block;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: inline-block;
+        position: absolute;
+        content: "";
+        top: 22px;
+        left: 95px;
+        .size(34px, 12px);
+        background-image: url("../img/icon-right-arrow-verylong.svg");
+      }
+    }
+  }
+}
+
+@media @tablet-width {
+  .programs-list__item {
+    position: relative;
+    margin-top: 32px;
+    padding-left: 53px;
+    padding-top: 74px;
+    padding-bottom: 60px;
+    background-color: @gray-light;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .programs-list__title {
+    margin-bottom: 25px;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 37px;
+    color: @black;
+    text-transform: uppercase;
+  }
+
+  .programs-list__description {
+    display: block;
+    width: 375px;
+    margin: 0;
+    margin-bottom: 56px;
+    padding: 0;
+    font-family: @arial-font;
+    font-size: 16px;
+    line-height: 24px;
+    color: @gray;
+    border: none;
+
+    &--pro {
+      width: 340px;
+    }
+  }
+
+  .programs-list__logo {
+    position: absolute;
+    top: 90px;
+    right: 61px;
+    .size(200px, 200px);
+    background-color: @green;
+    border-radius: 50%;
+
+    &--slim {
+      &::after {
+        position: absolute;
+        content: "";
+        top: -11px;
+        left: 29px;
+        .size(141px; 194px);
+        background-image: url("../img/icon-cat-slim.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--pro {
+      &::after {
+        position: absolute;
+        content: "";
+        top: 43px;
+        left: -35px;
+        .size(268px, 113px);
+        background-image: url("../img/icon-cat-pro.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .programs-list__link {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    color: @black;
+    text-transform: uppercase;
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 5px;
+      left: 128px;
+      .size(25px, 12px);
+      background-image: url("../img/icon-right-arrow-long.svg");
+    }
+
+    &::after {
+      display: block;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: inline-block;
+        position: absolute;
+        content: "";
+        top: 5px;
+        left: 128px;
+        .size(34px, 12px);
+        background-image: url("../img/icon-right-arrow-verylong.svg");
+      }
+    }
+  }
+}
+
+.programs-list__link:focus::before,
+.programs-list__link:hover::before {
+  background-image: url("../img/icon-right-arrow-long.svg");
+}
+
+@media @desktop-width {
+  .programs-list__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .programs-list__item {
+    margin-right: 80px;
+    margin-top: 54px;
+    padding-top: 75px;
+    padding-left: 52px;
+    padding-right: 56px;
+
+    &:first-child {
+      margin-top: 54px;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .programs-list__title {
+    margin: 0;
+    margin-left: 163px;
+    margin-bottom: 75px;
+  }
+
+  .programs-list__description {
+    width: 462px;
+    margin-bottom: 30px;
+  }
+
+  .programs-list__logo {
+    position: absolute;
+    top: 47px;
+    left: 53px;
+    .size(100px, 100px);
+    background-color: @green;
+    border-radius: 50%;
+
+    &--slim {
+      &::after {
+        position: absolute;
+        content: "";
+        top: -7px;
+        left: 13px;
+        .size(71px; 97px);
+        background-image: url("../img/icon-cat-slim.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--pro {
+      &::after {
+        position: absolute;
+        content: "";
+        top: 21px;
+        left: -18px;
+        .size(134px, 57px);
+        background-image: url("../img/icon-cat-pro.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .programs-list__link {
+    &::before {
+      top: 4px;
+      left: 130px;
+    }
+  }
+}
