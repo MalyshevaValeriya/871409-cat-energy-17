@@ -1,19 +1,90 @@
 .map {
-  height: 365px;
-}
+  &__maps {
+    display: none;
+    .size(100%, 100%);
+  }
 
-.map__maps {
-  .size(100%, 100%);
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  height: 360px;
+  width: 100%;
+  background-image: url("../img/bg-map-mobile@1x.png"), linear-gradient(@gray-light, @gray-light);
+  background-position: center -37px;
+  background-size: cover;
+
+  @media @retina {
+    background-image: url("../img/bg-map-mobile@2x.png"), linear-gradient(@gray-light, @gray-light);
+    background-position: center -37px;
+    background-size: cover;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    .size(55px, 53px);
+    top: 140px;
+    left: 41%;
+    background-image: url("../img/map-pin.png");
+    background-size: cover;
+  }
 }
 
 @media @tablet-width {
   .map {
+    width: 100%;
     height: 400px;
+    background-image: url("../img/bg-map-tablet@1x.png"), linear-gradient(@gray-light, @gray-light);
+    background-position: center -4px;
+    background-size: cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-map-tablet@2x.png"), linear-gradient(@gray-light, @gray-light);
+      background-position: center -4px;
+      background-size: cover;
+    }
+
+    &::after {
+      .size(113px, 106px);
+      top: 146px;
+      left: 42%;
+    }
   }
 }
 
 @media @desktop-width {
   .map {
     width: 100%;
+    height: 400px;
+    position: relative;
+    background-image: url("../img/bg-map-desktop@1x.png"), linear-gradient(@gray-light, @gray-light);
+    background-position: center 0;
+    background-size: cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-map-desktop@2x.png"), linear-gradient(@gray-light, @gray-light);
+      background-position: center 0;
+      background-size: cover;
+    }
+
+    &::after {
+      top: 150px;
+      left: 71%;
+    }
   }
 }
+
+.map--js {
+  background: none;
+
+  &::after {
+    display: none;
+    background-image: none;
+  }
+
+  .map__maps {
+    display: block;
+  }
+}
+
